@@ -43,8 +43,8 @@ Key Features:<br>
 6. Feedback/rating facility<br>
 
 Software Specifications:<br>
-• Frontend: React + Bootstrap<br>
-• Backend: MySql , Node.js + Express<br>
+• Frontend: PHP + HTML + CSS + Bootstrap<br>
+• Backend: Mysql <br>
 
 References:<br>
 1. https://www.mentoring.org/<br>
