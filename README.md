@@ -1,4 +1,4 @@
-Abstract
+Abstract<br>
 (Student Mentoring Management System)<br>
 Course Code: CS254 Course Title: DBMS LAB<br>
 Semester: B. Tech 4th Sem Section: S2<br>
@@ -39,8 +39,8 @@ Key Features:<br>
 4. Resource Sharing
 5. Fee calculation
 6. Feedback/rating facility<br>
-7. 
-Software Specifications:
+
+Software Specifications:<br>
 • Frontend: React + Bootstrap<br>
 • Backend: MySql , Node.js + Express<br>
 
