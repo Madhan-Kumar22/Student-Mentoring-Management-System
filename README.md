@@ -1,5 +1,5 @@
-Abstract<br>
-(Student Mentoring Management System)<br>
+<center>Abstract<br>
+(Student Mentoring Management System)<br></center>
 Course Code: CS254 Course Title: DBMS LAB<br>
 Semester: B. Tech 4th Sem Section: S2<br>
 Academic Year: 2020-21 <br>
