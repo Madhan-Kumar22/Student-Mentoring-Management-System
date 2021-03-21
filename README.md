@@ -31,6 +31,7 @@ connects the database using Node.js and Express.js.
 The following system can be used by both Students and Mentors to connect with each
 other. It has a user-friendly interface, hence it can be used without any prerequisite knowledge
 of the system.<br>
+
 Key Features:<br>
 1. Login facility
 2. Search Engine for finding mentors
@@ -38,9 +39,11 @@ Key Features:<br>
 4. Resource Sharing
 5. Fee calculation
 6. Feedback/rating facility<br>
+7. 
 Software Specifications:
 • Frontend: React + Bootstrap<br>
 • Backend: MySql , Node.js + Express<br>
+
 References:<br>
 1. https://www.mentoring.org/<br>
 2. https://www.mentoring.org/wp-content/uploads/2020/03/E-Mentoring-Supplement-to-EEP1.pdf<br>
