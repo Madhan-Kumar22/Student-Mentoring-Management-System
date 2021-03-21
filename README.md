@@ -4,7 +4,7 @@ Course Code: CS254 Course Title: DBMS LAB<br>
 Semester: B. Tech 4th Sem Section: S2<br>
 Academic Year: 2020-21 Course Instructor: Dr. Annappa B and
 Mr. Sharath Yaji<br>
-Team Members:<br>
+Team Members:
 1. V Madhan Kumar, 191CS260, 8050157579, madhankumar.191cs260@nitk.edu.in<br>
 2. Vinesh S Talpankar, 191CS265, 9481835943, vinesh.191cv253@nitk.edu.in<br>
 3. Arnab Das, 191CS210, 8918936324, berlin.191cs210@nitk.edu.in<br>
