@@ -156,7 +156,6 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
 
 $Se_id = $_SESSION['two'];
 $sub_name=$_SESSION['three'];
-$id=$_SESSION['four'];
 $servername = "localhost";
 $username = 'root';
 $password = '';
