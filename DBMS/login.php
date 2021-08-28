@@ -9,7 +9,14 @@
 <body>
 
 	<style type="text/css">
-	
+		 body {
+    background-image: url("p3.jpeg");
+	background-size:100%;
+	background-color: #cccccc;
+	} 
+
+
+		
 	#text{
 
 		height: 25px;
@@ -30,7 +37,7 @@
 
 	#box{
 
-		background-color: lightblue;
+		background-color: #FFF176;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
@@ -86,7 +93,7 @@ $file = $hello1;
     $_SESSION['two'] = $file;
 //}
 //echo $filename;
-	header("Location: index.php");
+	header("Location: searchengine_sub.php");
 	die;
 
 }

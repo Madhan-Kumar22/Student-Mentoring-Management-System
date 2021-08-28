@@ -56,19 +56,21 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
 <html>
 <head> <title>Students Allotment</title></head>
 <center><body> 
-<br><br>
-<h2>Students Allotment</h2>
-<br>
+
 <style type="text/css">
-	
+	body {
+ background-image: url("m.JPEG");
+ background-color: #cccccc;
+}
     #box{
 
-		background-color: lightblue;
+		background-color: #FFF176;
 		margin: auto;
 		width: 400px;
 		padding: 20px;
 	}
   table{
+    background-color: #FFF176;
 		position: absolute;
         left: 50%;
         top: 100%;
@@ -109,13 +111,45 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
             width: 90%;
         }
     }
+    
 
 	</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="choose.php">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="mentor_feedback_display.php">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="newfees.php">Set fees <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="Mentor_Allotment.php">Students Allotment <span class="sr-only">(current)</span></a>
+      </li>
+      </ul>
+      <form class="form-inline">
+      <a class="btn btn-success" href="choose.php" role="button">Logout</a>
+    
+  </form>
+  </div>
+</nav>
+
+<br><br>
+<br><br>
+<h1 style= "color: #FFFF00;">Students Allotment</h1>
+<br>
 <div id="box">
 <form action="Mentor_Allotment.php" method="post"  class="center">
 <div class="form-group">
 <label for="exampleFormControlSelect2">Select Subject:</label>
-<select class="form-control" id="exampleFormControlSelect2" name = 'subject' size = 6>  
+<select class="form-control" id="exampleFormControlSelect2" name = 'subject' size = 4>  
                 <!-- <option   value = 'Math'>Math</option> 
                 <option   value = 'Biology'>Biology</option> 
                 <option   value = 'Physics'>Physics</option> 
@@ -140,8 +174,7 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
 </div>
 <br>
 <input type="submit" name ="Display" value= "Display">
-<br>
-<br><a class="btn btn-success" href="Mindex.php">Back to index</a><br><br>
+
 </form>
 </body></center>
 </html>
@@ -173,8 +206,8 @@ if(isset($_POST['Display']))
 	
 $query = "SELECT b.fname,fees_per_hr, No_of_hrs , (fees_per_hr * No_of_hrs) as Total_Session_Fees, slot_or_date as Session_Date FROM sessionmanagement as a,student_reg as b WHERE a.S_id=b.S_id and Sub_id=(select Sub_id from subject where Sub_name='$subject') and a.M_id = '$id'";
 $result = mysqli_query($dbname, $query);
-echo "<br><br>";
-echo "<center>Subject: $subject</center>";
+//echo "<br><br>";
+echo "<h6 align='center' style= 'color: #FFFF00;'>$subject<br><br>";
 echo"<table align='center' border ='1'>";
 
 echo"<tr><td>Student Name</td><td>Fees Per hr</td><td>Session Duration (hrs)</td><td>Session Earning</td><td> Session_Date</td></tr>";

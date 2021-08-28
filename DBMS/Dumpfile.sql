@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2021 at 08:47 PM
+-- Generation Time: Mar 23, 2021 at 06:02 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `feedback` (
   `M_id` int(11) NOT NULL,
   `Sub_name` varchar(50) NOT NULL,
-  `Rating` decimal(3,2) DEFAULT NULL,
+  `Rating` int(4) DEFAULT NULL,
   `feedback` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -43,7 +43,7 @@ INSERT INTO `feedback` (`M_id`, `Sub_name`, `Rating`, `feedback`) VALUES
 (13, 'Physics', NULL, NULL),
 (13, 'Chemistry', NULL, NULL),
 (13, 'Social Studies', NULL, NULL),
-(14, 'Math', '4.00', 'good satisfactory...ok'),
+(14, 'Math', 4, 'good satisfactory...ok'),
 (14, 'Biology', NULL, NULL),
 (14, 'Physics', NULL, NULL),
 (14, 'Chemistry', NULL, NULL),
@@ -59,10 +59,10 @@ INSERT INTO `feedback` (`M_id`, `Sub_name`, `Rating`, `feedback`) VALUES
 (16, 'Biology', NULL, NULL),
 (16, 'Physics', NULL, NULL),
 (16, 'Chemistry', NULL, NULL),
-(16, 'Social Studies', '3.00', 'qwe'),
+(16, 'Social Studies', NULL, NULL),
 (16, 'English', NULL, NULL),
-(17, 'Math', '2.00', 'okay'),
-(17, 'Math', '2.00', 'okay'),
+(17, 'Math', NULL, NULL),
+(17, 'Math', NULL, NULL),
 (17, 'Biology', NULL, NULL),
 (17, 'Biology', NULL, NULL),
 (17, 'Physics', NULL, NULL),
@@ -82,23 +82,27 @@ INSERT INTO `feedback` (`M_id`, `Sub_name`, `Rating`, `feedback`) VALUES
 (18, 'Social Studies', NULL, NULL),
 (18, 'English', NULL, NULL),
 (18, 'Computer Science', NULL, NULL),
-(19, 'Math', '3.00', 'rtgs'),
+(19, 'Math', NULL, NULL),
 (19, 'Biology', NULL, NULL),
 (19, 'Physics', NULL, NULL),
 (19, 'Chemistry', NULL, NULL),
 (19, 'Social Studies', NULL, NULL),
 (19, 'English', NULL, NULL),
 (19, 'Computer Science', NULL, NULL),
-(22, 'Math', NULL, NULL),
-(22, 'Biology', '4.00', 'good'),
+(20, 'Physics', 10, 'fantastic'),
+(20, 'Chemistry', NULL, NULL),
+(20, 'Social Studies', NULL, NULL),
+(21, 'Math', 3, 'fantastic'),
+(21, 'Physics', NULL, NULL),
+(21, 'Social Studies', NULL, NULL),
+(21, 'English', NULL, NULL),
+(21, 'Computer Science', 10, 'good'),
+(22, 'Math', 4, 'good'),
+(22, 'Physics', NULL, NULL),
 (22, 'Chemistry', NULL, NULL),
 (22, 'English', NULL, NULL),
-(23, 'Biology', '5.00', 'sfgbsfb'),
-(23, 'Physics', NULL, NULL),
-(23, 'Social Studies', NULL, NULL),
-(23, 'English', NULL, NULL),
-(25, 'Physics', NULL, NULL),
-(25, 'Chemistry', NULL, NULL);
+(22, 'Computer Science', NULL, NULL),
+(23, 'Math', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -131,16 +135,20 @@ INSERT INTO `fees` (`M_id`, `Sub_id`, `fees_per_hr`) VALUES
 (19, 5, 55),
 (19, 6, NULL),
 (19, 7, 99999),
-(22, 1, NULL),
-(22, 2, NULL),
-(22, 4, 20),
-(22, 6, 30),
-(23, 2, NULL),
-(23, 3, 10),
-(23, 5, NULL),
-(23, 6, NULL),
-(25, 3, 100),
-(25, 4, 200);
+(20, 3, 100),
+(20, 4, 12),
+(20, 5, NULL),
+(21, 1, 100),
+(21, 3, 120),
+(21, 5, NULL),
+(21, 6, 1000),
+(21, 7, 50),
+(22, 1, 1),
+(22, 3, 2),
+(22, 4, 3),
+(22, 6, 4),
+(22, 7, 5),
+(23, 1, 8);
 
 -- --------------------------------------------------------
 
@@ -159,21 +167,12 @@ CREATE TABLE `mentor_login` (
 --
 
 INSERT INTO `mentor_login` (`M_id`, `username`, `password`) VALUES
-(5, '4tgrgd', 'gtrvfd'),
-(6, 'grevfd', 'grevfd'),
-(8, 'syrfgsrth', 'wy4th4thr'),
-(10, 'erwer', 'werwerfr'),
 (11, 'vinesh', '123'),
-(13, 'qwe', ''),
-(14, 'poi', 'lkj'),
 (15, 'ral', 'ral'),
-(16, 'wsx', 'qaz'),
-(17, 'wsx', 'edc'),
-(18, 'okm', 'ijn'),
-(19, 'zz', 'zz'),
-(22, 'rdqwe', 'qwedwq'),
-(23, 'qer', 'qerf'),
-(25, '1920', '1920');
+(20, 'jes', 'per'),
+(21, 'tho', 'kar'),
+(22, 'raj', 'kum'),
+(23, '1290', '1290');
 
 -- --------------------------------------------------------
 
@@ -197,12 +196,6 @@ CREATE TABLE `mentor_reg` (
 --
 
 INSERT INTO `mentor_reg` (`M_id`, `fname`, `lname`, `email`, `contact`, `city`, `Qualification`, `Resume_Link`) VALUES
-(1, 'Hulk', NULL, 'hulk@gmail.com', '1237347891', 'Chennai', 'BTech Mech', 'www.linkedin.com/hulk'),
-(2, 'Natasha', NULL, 'natasha@gmail.com', '1233829103', 'Andhra', 'BTech Chem', 'www.linkedin.com/natasha'),
-(3, 'Tony', 'Stark', 'stark@gmail.com', '1234567891', 'Bengaluru', 'BTech CSE', 'www.linkedin.com/stark-tony'),
-(4, 'Strange', NULL, 'strange@gmail.com', '1236543212', 'Kochi', 'BTech EEE', 'www.linkedin.com/strange'),
-(5, 'atf', 'srg', 'rgfd@fhb.efd', '2145653298', 'efd', 'tregfd', 'efd.tsrg'),
-(6, 'werqe', 'qerfqer', 'qrefqre@sg.yth', '1245895645', 'fdrstgd', 'trgfd', 'etfd.aefd'),
 (8, 'hrth', 'rthsrth', 'areer@yrg.reg', '2165324521', 'rget', 'agerfd', 'agre.ager'),
 (10, 'qwedwedqty', 'qweqer', 'dwqq@we.we', '2149765843', 'erfwerf', 'werfwef', 'qrfqryun.rty'),
 (11, 'vinesh', 'Talpankar', 'a@gm.com', '1234123412', 'Karwar', '12', '1233.com'),
@@ -213,11 +206,10 @@ INSERT INTO `mentor_reg` (`M_id`, `fname`, `lname`, `email`, `contact`, `city`, 
 (17, 'plsvkf', 'bdfb', 'fdb@sssf.bd', '1209120912', 'Karwar', 'Btech ', 'fewmf.bfg'),
 (18, 'dscdsc', 'sacvd', 'dcdc@rk.vd', '9238478623', 'Karwar', 'Btech ', 'efkmf.ekf'),
 (19, 'madhan', 'hdfb', 'jbd@jdbf.com', '1745111122', 'Karwar', 'Btech ', 'djbvjdv.djbfjn'),
-(20, 'Vinesh', '', 'jksnd@jns.e', '1256187946', 'qerfqer', 'qerfe', 'qrq.qerf'),
-(22, 'qrqrf', 'qwrfqwr', 'qwrqw@eq.reqr', '1249784626', 'qerqef', 'qerfeq', 'qereqr.qereqr'),
-(23, 'qreqr', 'qrqer', 'qer@er.wer', '1226484659', 'Bengaluru', 'qerqf', 'qre.erer'),
-(24, 'abcd', 'sds', 'abcd@gsd.ds', '1629487659', 'Kolkata', 'arf', 'erfref.aerfar'),
-(25, 'reqqref', 'qrefeqrf', 'qrqfr@ereq.qerfq', '1226597846', 'qerf', 'qerfeq', 'qer.qerfq');
+(20, 'Jessica', 'Perkins', 'j.perkins@randatmail.com	', '9874624690', 'Kolkata', 'Btech', 'resume.in/bmslf'),
+(21, 'Thomas', 'Karl', 'thomas@gmail.com', '7395973984', 'Kolkata', 'Btech', 'resume.in/bdsmgdjhked'),
+(22, 'Rajesh', 'Kumar', 'rajesh@gmail.com', '1234876544', 'Kolkata', 'Btech', 'resume.in/bifmsbk'),
+(23, 'zac', 'fkvmfddc', 'zac@dc.c', '1234321234', 'Kolkata', 'Btech', 'resume.in/bdsmgdjhkeddfcds');
 
 -- --------------------------------------------------------
 
@@ -291,16 +283,20 @@ INSERT INTO `mentor_sub` (`M_id`, `Sub_id`) VALUES
 (19, 5),
 (19, 6),
 (19, 7),
+(20, 3),
+(20, 4),
+(20, 5),
+(21, 1),
+(21, 3),
+(21, 5),
+(21, 6),
+(21, 7),
 (22, 1),
-(22, 2),
+(22, 3),
 (22, 4),
 (22, 6),
-(23, 2),
-(23, 3),
-(23, 5),
-(23, 6),
-(25, 3),
-(25, 4);
+(22, 7),
+(23, 1);
 
 -- --------------------------------------------------------
 
@@ -350,23 +346,12 @@ CREATE TABLE `sessionmanagement` (
 --
 
 INSERT INTO `sessionmanagement` (`S_id`, `M_id`, `Sub_id`, `fees_per_hr`, `No_of_hrs`, `slot_or_date`) VALUES
-(49, 23, 2, NULL, 6, '2021-03-19'),
-(49, 25, 4, 200, 999, '2021-03-19'),
-(49, 23, 6, NULL, 7, '2021-03-18'),
-(49, 23, 6, NULL, 2, '2021-03-17'),
-(49, 23, 6, NULL, 2, '2021-03-17'),
-(49, 19, 5, 55, 5, '2021-03-13'),
-(49, 19, 5, 55, 96, '2021-03-25'),
-(49, 19, 5, 55, 69, '2021-03-24'),
-(49, 19, 5, 55, 16, '2021-03-18'),
-(49, 25, 4, 200, 19, '2021-03-19'),
-(52, 22, 1, NULL, 100, '2021-03-27'),
-(54, 22, 1, NULL, 16, '2021-03-23'),
-(55, 22, 1, NULL, 1000, '2023-06-15'),
-(55, 19, 1, 1, 4, '2021-03-25'),
-(56, 18, 2, 1, 55, '2021-03-21'),
-(54, 19, 4, 4, 69, '2021-03-24'),
-(54, 18, 3, 130, 5, '2021-03-21');
+(55, 23, 1, 100, 12, '2021-03-28'),
+(55, 23, 1, 100, 123, '2021-03-31'),
+(53, 23, 1, 100, 12, '2021-03-21'),
+(53, 23, 1, 100, 13, '2021-03-05'),
+(55, 23, 1, 100, 23, '2021-04-03'),
+(55, 23, 1, 100, 3, '2021-03-19');
 
 -- --------------------------------------------------------
 
@@ -385,41 +370,11 @@ CREATE TABLE `student_login` (
 --
 
 INSERT INTO `student_login` (`S_id`, `username`, `password`) VALUES
-(2, 'qeqerfeqr', ''),
-(4, 'fqwrqwr', ''),
-(7, 'sthn', ''),
-(9, 'qrefqerq', 'qrfqefeq'),
-(12, 'kumar121', 'pass121kumar'),
-(15, 'swifttaylor', '123taylor'),
-(17, 'qerfeq', '123pass'),
-(18, 'spider121', 'gwenstacy'),
-(19, 'qeg', 'qegqergg'),
-(20, 'qerfeqf', 'qefqr134'),
-(21, 'qrefqerf', 'qerfqer'),
-(22, 'rgv', 'srgfbb'),
-(24, 'asdas', 'qrfqwefwq'),
-(25, 'wedwedq', 'qwqwdqwed'),
-(27, 'referf', 'wreerf'),
-(29, 'yoyo', 'qwedqw'),
-(30, 'rqwed', 'qqwed'),
-(31, 'qwdqwe', 'qwedqew'),
-(32, 'qedqw', 'qwedwqed'),
-(35, 'wedw', 'qwedwqd'),
-(38, 'qwedw', 'qwedwqd'),
-(40, 'edew', 'wedqew'),
-(41, 'wedqwe', 'qwedqe'),
-(42, 'refqerf', 'qrfqrf'),
-(44, 'rqef', 'qwrfqer'),
-(45, 'qrfqr', 'qwqwe'),
-(47, 'wreqf', 'qrefeqr'),
-(48, 'refwer', 'qrfwer'),
-(49, 'asd', 'zxc'),
-(50, 'iop', 'bnm'),
 (51, 'as', 'sa'),
-(52, 'user123', 'user'),
-(54, 'rtw', 'wtrg'),
-(55, '2019', '2019'),
-(56, '1919', '1919');
+(52, 'rub', 'tho'),
+(53, 'mar', 'max'),
+(54, 'jac', 'max'),
+(55, '0921', '0921');
 
 -- --------------------------------------------------------
 
@@ -442,20 +397,6 @@ CREATE TABLE `student_reg` (
 --
 
 INSERT INTO `student_reg` (`S_id`, `fname`, `lname`, `grade`, `email`, `contact`, `city`) VALUES
-(1, 'qerqe', 'r', '8', '@ffd.ef', '1234567845', 'qerf'),
-(2, 'hello', 'world', '2', 'sdas@hbs.com', '9999999999', 'qqwerfqef'),
-(4, 'wtwt', 'wetg', '5', 'werw@gd.com', '1254163254', 'qwfqw'),
-(7, 'dghn', 'dghgdn', '5', 'dghd@wr.bgd', '1234578451', 'syst'),
-(9, 'Shakti', 'Man', '5', 'erwfq@bhd.com', '1234574120', 'qrqf'),
-(12, 'Kumar', '', '10', 'kumar@gmail.com', '1245789512', 'Bengaluru'),
-(15, 'swift', '', '4', 'erf@wdfv.com', '1234795216', 'Kochi'),
-(16, 'hello', '', '12', 'erf@fe.com', '1524785962', 'rqef'),
-(17, 'hello12', '', '7', 'qwr@jndf.com', '1233247216', 'erfqef'),
-(18, 'SpiderMan', '', '', 'spider@gmail.com', '1524632574', 'Mumbai'),
-(19, 'yt', 'rthrt', '', 'rtsr@ghg.com', '1342154721', 'rtwg'),
-(20, 'wrwerf', 'weref', '', 'werwe@wfdv.com', '1245784512', 'wer'),
-(21, 'rtg', 'wtgwtg', '', 'wtgw@wg.com', '1524784214', 'rew'),
-(22, 'hdg', 'ghngh', '5', 'sh@hfg.vom', '2132654589', 'trgfd'),
 (24, 'were', 'rqfqef', '10', 'qrefq@g.rf', '2145658978', 'qefqf'),
 (25, 'erqerf', 'qrfqwf', '5', 'reqf@frf.com', '2132567898', 'wedqwedqw'),
 (27, 'errf', 'refwef', '5', 'eraf@fvd.vom', '2145473426', 'rferferf'),
@@ -476,10 +417,10 @@ INSERT INTO `student_reg` (`S_id`, `fname`, `lname`, `grade`, `email`, `contact`
 (49, 'vinesh', 'Talpankar', '7', 's@g.c', '1234432112', 'Karwar'),
 (50, 'vineshmnm', 'hghvj', '13', 'dhfcj@bmk.com', '1231231234', 'Karwar'),
 (51, 'drgdfgd', 'drgrg', '12', 'sdf@df.com', '1232123212', 'Karwar'),
-(52, 'hero', 'zero', '3', 'ad@nf.com', '1256487956', 'Bengaluru'),
-(54, 'fgsfbsfg', 'sfsg', '5', 'sfgssf@wrg.gv', '1226597943', 'Karwar'),
-(55, 'adatc', 'sdasds', '5', 'ewasd@eeq.erfq', '1625497846', 'ewqd'),
-(56, 'sbfilabsfas', 'afsfsfsaf', '15', 'asf@segte.aregae', '1626594879', 'aergeag');
+(52, 'Rubie', 'Thomas', '7', 'r.thomas@randatmail.com	', '9365937493', 'Mumbai'),
+(53, 'Mark', 'Max', '12', 'mark@gmail.com', '1488394654', 'Kolkata'),
+(54, 'Jack', 'Max', '12', 'jack@gmail.com', '1673874362', 'Kolkata'),
+(55, 'jeff', 'kdcm', '12', 'dcccc@cs.cc', '1290129012', 'Kolkata');
 
 -- --------------------------------------------------------
 
@@ -570,16 +511,19 @@ INSERT INTO `student_sub` (`S_id`, `Sub_id`) VALUES
 (51, 6),
 (51, 7),
 (52, 1),
+(52, 2),
 (52, 3),
-(52, 4),
 (52, 5),
+(52, 6),
+(53, 1),
+(53, 3),
+(53, 7),
 (54, 1),
 (54, 3),
-(54, 5),
-(55, 3),
-(55, 4),
-(56, 2),
-(56, 3);
+(54, 4),
+(54, 6),
+(54, 7),
+(55, 1);
 
 -- --------------------------------------------------------
 
@@ -695,13 +639,13 @@ ALTER TABLE `subject`
 -- AUTO_INCREMENT for table `mentor_reg`
 --
 ALTER TABLE `mentor_reg`
-  MODIFY `M_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `M_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `student_reg`
 --
 ALTER TABLE `student_reg`
-  MODIFY `S_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `S_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT for table `subject`

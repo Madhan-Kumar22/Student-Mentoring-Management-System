@@ -38,8 +38,29 @@
 
 	</style>
 		<br>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="mentor_feedback_display.php">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="newfees.php">Set fees <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="Mentor_Allotment.php">Students Allotment <span class="sr-only">(current)</span></a>
+      </li>
+  </div>
+</nav>
 	<div id="box">
-	<br>
+	<br><br>
 		<form method="post">
 		<h1>	<div style="font-size: 20px;margin: 10px;color: black;">Choose filter for Mentor Index :</div></h6>
 		<br>

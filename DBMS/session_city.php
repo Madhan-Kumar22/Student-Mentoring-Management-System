@@ -7,11 +7,15 @@
 </head>
 <center>
 <body>
-<br><br>
-<h2>Session Management</h2>
+
+
 
 	<style type="text/css">
-	
+		 body {
+    background-image: url("p3.jpeg");
+	background-size:100%;
+	background-color: #cccccc;
+	} 
 	#text{
 
 		height: 25px;
@@ -32,7 +36,7 @@
 
 	#box{
 
-		background-color: lightblue;
+		background-color: #FFF176;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
@@ -40,6 +44,9 @@
 
 	</style>
 <br><br>
+<br><br>
+<h1 style= "color: #FFFF00;">Session Management</h1>
+<br>
 <div id="box">
 <form action="session_city.php" method="post"  class="center">
 <label for="exampleFormControlSelect2">Select Session duration :</label>
@@ -53,7 +60,7 @@
         <br>
 <input type="submit" name ="signup" value= "Book">
 <br>
-<br><a class="btn btn-success" href="index.php">Back to index</a><br><br>
+<br><a class="btn btn-success" href="City_search.php">Back</a><br><br>
         </div>
 </form>       
 </body>

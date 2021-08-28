@@ -13,11 +13,21 @@
 
 		height: 25px;
 		border-radius: 5px;
+		color: blue;
 		padding: 4px;
 		border: solid thin #aaa;
 		width: 100%;
 	}
 
+	body {
+    background-image: url("wallpaper.jpeg");
+	background-size: 100%;
+	background-color: #cccccc;
+	}
+
+	h1 {
+  color: #FFCC80;
+   }
 	#button{
 
 		padding: 10px;
@@ -26,6 +36,7 @@
 		background-color: lightblue;
 		border: none;
 	}
+	
 
 	#box{
 
@@ -45,7 +56,7 @@
 	<div id="box">
 		<form method="post">
 	
-		<h1>	<div style="font-size: 20px;margin: 10px;color: black;">Choose role :</div></h6>
+		<h1>	<div style="font-size: 20px;margin: 10px;color:#FF9800;">Choose role :</div></h6>
 		<br><a class="btn btn-primary" href="Student_reg.php" role="button">Student</a><br><br>
 		<br><a class="btn btn-primary" href="Mreg.php" role="button">Mentor</a>
 		</form>

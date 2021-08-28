@@ -18,19 +18,23 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
 <html>
 <head> <title>Search Engine</title></head>
 <center><body> 
-<br><br>
-<h2>Search Engine by subject</h2>
-<br>
+
+
 <style type="text/css">
-	
+	 body {
+    background-image: url("p3.jpeg");
+	background-size:100%;
+	background-color: #cccccc;
+	} 
     #box{
 
-		background-color: lightblue;
+		background-color: #FFF176;
 		margin: auto;
 		width: 400px;
 		padding: 20px;
 	}
 	table{
+        background-color: #FFF176;
 		position: absolute;
         left: 50%;
         top: 100%;
@@ -73,6 +77,45 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
     }
 
 	</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="choose.php">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="searchengine_sub.php">Search By Subject <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="City_search.php">Search By City <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="feedback.php">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="ResourceSharing.php"> Resource Sharing <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="StudentFee.php"> Fees <span class="sr-only">(current)</span></a>
+      </li>
+      </ul>
+      <form class="form-inline">
+      <a class="btn btn-success" href="choose.php" role="button">Logout</a>
+    
+  </form>
+  </div>
+</nav>
+<br><br>
+<br><br>
+<h1 style= "color: #FFFF00;">Search Engine by subject</h1>
+<br>
+
 <div id="box">
 <form id="myform" action="searchengine_sub.php" method="post"  class="center">
 
@@ -113,8 +156,7 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
 
 <br>
 <input type="submit" name ="submit" value= "Submit">
-<br>
-<br><a class="btn btn-success" href="index.php">Back to index</a><br><br>
+
 </form>
 </body></center>
 </html>
@@ -159,7 +201,7 @@ if(isset($_POST['submit']))
 	$result = mysqli_query($dbname, $query);
 	echo "<br><br>";
 	
-echo "<p align='center'>$sub_name<br><br>";
+echo "<h6 align='center' style= 'color: #FFFF00;'>$sub_name<br><br>";
 echo"<table align='center' border ='1'>";
 
 echo"<tr><td>Fname</td><td>Lname</td><td>City</td><td>Fees_per_hr</td><td>Choose</td></tr>";

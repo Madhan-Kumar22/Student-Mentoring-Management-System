@@ -1,21 +1,35 @@
-
-
-
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<?php
+$servername = "localhost";
+$username = 'root';
+$password = '';
+$dbname = 'dbms1';
+//echo $hello;
+$dbname = mysqli_connect($servername,$username,$password,$dbname);
+$sqld="select curdate(); ";
+$date=mysqli_query($dbname, $sqld);
+
+
+?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Session Management</title>
+	
 </head>
 <center>
 <body>
-<br><br>
-<h2>Session Management</h2>
+
 
 	<style type="text/css">
-	
+		 body {
+    background-image: url("p3.jpeg");
+	background-size:100%;
+	background-color: #cccccc;
+	} 
 	#text{
 
 		height: 25px;
@@ -36,7 +50,7 @@
 
 	#box{
 
-		background-color: lightblue;
+		background-color: #FFF176;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
@@ -44,6 +58,9 @@
 
 	</style>
 <br><br>
+<br><br>
+<h1 style= "color: #FFFF00;">Session Management</h1>
+<br>
 <div id="box">
 <form action="SessionManagement.php" method="post"  class="center">
 <label for="exampleFormControlSelect2">Select Session duration :</label>
@@ -52,21 +69,26 @@
         </div>
         <label for="exampleFormControlSelect2">Select Session date :</label>
 		<div class="form-group">
-        <input type="date" class="form-control" name="slot" placeholder="Slot" required="required">
+	
+  <input type="date" name="slot" min="<?php echo date('Y-m-d'); ?>" class="form-control datepicker" autocomplete="off"  >
+    
         </div>
         <br>
 <input type="submit" name ="signup" value= "Book">
 <br>
-<br><a class="btn btn-success" href="index.php">Back to index</a><br><br>
+<br><a class="btn btn-success" href="searchengine_sub.php">Back</a><br><br>
         </div>
 </form>       
 </body>
+
 </center>
 </html>
 
 
 <?php
 //session_start();
+//class="form-control datepicker" autocomplete="off"
+//<input type="date" class="form-control" name="slot" id="datepicker" placeholder="Slot" required="required" min="<?php echo date('$date'); 
 session_start();
 if(isset($_GET['id']))
 {

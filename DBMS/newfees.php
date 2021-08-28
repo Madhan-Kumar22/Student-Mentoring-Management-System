@@ -21,19 +21,51 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
 <html>
 <head> <title>Fees</title></head>
 <center><body> 
-<br><br>
-<h2>Fees</h2>
-<br>
+
 <style type="text/css">
+	body {
+ background-image: url("m.JPEG");
+ background-color: #cccccc;
+}
 	#box{
 
-		background-color: lightblue;
+		background-color: #FFF176;
 		margin: auto;
 		width: 400px;
 		padding: 20px;
 	}
 
 	</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="choose.php">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="mentor_feedback_display.php">Feedback <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="newfees.php">Set fees <span class="sr-only">(current)</span></a>
+      </li>
+
+	  <li class="nav-item active">
+        <a class="nav-link" href="Mentor_Allotment.php">Students Allotment <span class="sr-only">(current)</span></a>
+      </li>
+      </ul>
+      <form class="form-inline">
+      <a class="btn btn-success" href="choose.php" role="button">Logout</a>
+    
+  </form>
+  </div>
+</nav>
+<br><br>
+<br><br>
+<h1 style= "color: #FFFF00;">Fees</h1>
+<br>
 <div id="box">
 <form action="newfees.php" method="post" class="center">
 <div class="form-group">
@@ -66,9 +98,7 @@ $dbname = mysqli_connect($servername,$username,$password,$dbname);
         <br>
   
  <input type="submit" name ="submit" value= "submit">
- <br>
-
-		<br><a class="btn btn-success" href="Mindex.php" role="button">Back to index</a><br><br>
+ 
 </form>
 </div>
 </body></center>

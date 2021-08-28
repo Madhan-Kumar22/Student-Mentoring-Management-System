@@ -9,7 +9,17 @@
 <body>
 
 	<style type="text/css">
-	
+		body {
+ background-image: url("m.JPEG");
+ background-color: #cccccc;
+}
+	#box{
+
+		background-color: #FFF176;
+		margin: auto;
+		width: 400px;
+		padding: 20px;
+	}
 	#text{
 
 		height: 25px;
@@ -28,13 +38,7 @@
 		border: none;
 	}
 
-	#box{
 
-		background-color: lightblue;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
 
 	</style>
 <br><br>
@@ -93,7 +97,7 @@ $filename = $hello;
     $_SESSION['one'] = $filename;
 //}
 //echo $filename;
-header("Location:Mindex.php");
+header("Location:Mentor_Allotment.php");
 	die;
 }
  else
